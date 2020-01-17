@@ -1,0 +1,6 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Assignment 1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Puzzle_15.c
+c:\users\administrator\source\repos\assignment 1\assignment 1\puzzle_15.c(8): warning C4013: 'time' undefined; assuming extern returning int
+  Puzzle_15_main.c
+  Generating Code...
+  Assignment 1.vcxproj -> C:\Users\Administrator\source\repos\Assignment 1\Debug\Puzzle_15.exe

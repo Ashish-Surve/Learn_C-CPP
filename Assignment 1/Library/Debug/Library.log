@@ -1,0 +1,5 @@
+﻿  Library_main.c
+c:\users\administrator\source\repos\assignment 1\library\library_main.c(32): warning C4047: 'function': 'int' differs in levels of indirection from 'char (*)[30]'
+c:\users\administrator\source\repos\assignment 1\library\library_main.c(32): warning C4024: 'displayBookInfo': different types for formal and actual parameter 2
+c:\users\administrator\source\repos\assignment 1\library\library_main.c(43): warning C4013: 'exit' undefined; assuming extern returning int
+  Library.vcxproj -> C:\Users\Administrator\source\repos\Assignment 1\Debug\Library.exe

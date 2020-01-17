@@ -1,0 +1,5 @@
+﻿  Header.c
+c:\users\administrator\source\repos\testing\testing\header.c(8): error C2084: function 'void dummy()' already has a body
+  c:\users\administrator\source\repos\testing\testing\header.c(2): note: see previous definition of 'dummy'
+  new.c
+  Generating Code...

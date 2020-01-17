@@ -1,0 +1,7 @@
+﻿  dynamic.c
+c:\users\administrator\documents\visual studio 2017\elts a11606\day1\dynamicallymemallocation\dynamic.c(9): warning C4477: 'scanf_s' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'int'
+c:\users\administrator\documents\visual studio 2017\elts a11606\day1\dynamicallymemallocation\dynamic.c(14): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'int'
+  c:\users\administrator\documents\visual studio 2017\elts a11606\day1\dynamicallymemallocation\dynamic.c(14): note: this argument is used by a conversion specifier
+c:\users\administrator\documents\visual studio 2017\elts a11606\day1\dynamicallymemallocation\dynamic.c(14): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'char *'
+  c:\users\administrator\documents\visual studio 2017\elts a11606\day1\dynamicallymemallocation\dynamic.c(14): note: this argument is used as a buffer size
+  DynamicallyMemAllocation.vcxproj -> C:\Users\Administrator\Documents\Visual Studio 2017\ELTS A11606\Day1\x64\Debug\DynamicallyMemAllocation.exe

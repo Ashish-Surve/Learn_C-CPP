@@ -1,0 +1,5 @@
+﻿  Team.c
+c:\users\administrator\source\repos\assignment 1\tournament\team.c(9): warning C4013: 'time' undefined; assuming extern returning int
+  Tournament_main.c
+  Generating Code...
+  Tournament.vcxproj -> C:\Users\Administrator\source\repos\Assignment 1\Debug\Tournament.exe
