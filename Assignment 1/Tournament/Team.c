@@ -46,70 +46,105 @@ void setUpTeam(Team teams[T_SIZE])
 			(teams[i].P[j]).Skills = x;
 			//printf("String:%c%c :%d \n", (teams[i].P[j]).Name[0], (teams[i].P[j]).Name[1], (teams[i].P[j]).Skills);
 
+			(teams[i].P[j]).p_run = 0;
+			(teams[i].P[j]).wickets = 0;
 		}
 		
 	}
 	
 }
 
-void displayTeamInfo(Team teams[T_SIZE])
+void displayTeamInfo(Team team)
 {
-	int i, j;
-
-	for (i = 0; i < T_SIZE; i++)
-	{
-		printf("Team Name :%c\n", teams[i].TeamName);
+	int  j;
+	printf("\n============================================\n");
+		printf("Team Name :%c\n", team.TeamName);
 		for (j = 0; j < 10; j++)
 		{
-			//SET NAME
-			printf("Player Name :\t%c%c\t", (teams[i].P[j]).Name[0], (teams[i].P[j]).Name[1]);
+			//PRINT NAME
+			printf("Player Name :%c%c\t", (team.P[j]).Name[0], (team.P[j]).Name[1]);
 
 			//x =0 means batter =1 means bowler. check Player.h
-			if ((teams[i].P[j]).Skills == BATTER)
-				printf("Skill:\t :Batter \n");
+			if ((team.P[j]).Skills == BATTER)
+				printf("Skill:\t :Batter \t");
 			else
-				printf("Skill:\t :Bowler \n");
+				printf("Skill:\t :Bowler \t");
+
+			//PRINT RUNS
+			printf("Runs  :\t%d\t\n", (team.P[j]).p_run);
 
 		}
-		printf("\n");
-	}
+		printf("\n============================================\n");
+
 }
 
-int play(Team A, Team B)
+int play(Team* A, Team* B)
 {
 	int batsman_counter = 0;
-
 	int ball_count = 0;
-	Player Bowler;
-	Player Batsman;
+	Player* Bowler=NULL;
+	Player* Batsman=NULL;
 	int score=0;
 	int wicket = 0;
-	int bowler_counter;
-	for (ball_count = 0; ball_count < 6 * OVERS, batsman_counter<10; ball_count++)
+	int bowler_counter=0;
+	int run=0;
+	int team_run = 0;
+
+	printf("\nBatting : %c\tBowling : %c\n", A->TeamName, B->TeamName);
+	for (ball_count = 0; ball_count < (6 * OVERS) && batsman_counter<10; ball_count++)
 	{
-		//get Bowler
+		//get Bowler and Batsman
 		bowler_counter = getBowler(B);
-		Bowler = B.P[bowler_counter];
-		Batsman = A.P[batsman_counter];
+		Bowler = &B->P[bowler_counter];
+		Batsman = &A->P[batsman_counter];
+		// Batsman plays 
+		run = playerBatting();
+		if (run <= OUT)
+		{
+			batsman_counter++;
+			Bowler->wickets++;
+		}
+		else
+		{
+			Batsman->p_run += run;
+			team_run += run;
+		}
 
-		printf("Bowler is : %d", B.P[bowler_counter].Name);
-
+		//printf("Bowler is : %d", B.P[bowler_counter].Name);
+		
 	}
+	return team_run;
 }
 
-int getBowler(Team A)
+int getBowler(Team* A)
 {
 	{
 
 		static int x = 0;
 		int i;
-		while (A.P[x].Skills != BOWLER)
+		while ((*A).P[x].Skills != BOWLER)
 		{
 			x = (x + 1) % 10;
 		}
 
 		x = (x + 1) % 10;
 		return x - 1;
+	}
+}
+
+void refreshScore(Team teams[T_SIZE])
+{
+
+	int i, j;
+	srand(time(0));
+	for (i = 0; i < T_SIZE; i++)
+	{
+		for (j = 0; j < 10; j++)
+		{
+			(teams[i].P[j]).p_run = 0;
+			(teams[i].P[j]).wickets = 0;
+		}
+
 	}
 }
 

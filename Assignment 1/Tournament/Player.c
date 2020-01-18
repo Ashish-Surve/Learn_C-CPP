@@ -2,6 +2,6 @@
 
 int playerBatting()
 {
-	srand(time(0));
-	return (rand() % 6);
+	
+	return ((rand() % 8)-1);
 }

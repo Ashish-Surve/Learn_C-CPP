@@ -30,7 +30,7 @@ int main()
 			break;
 		case 4:
 			break;
-		case 5: InOrderTraversal(root);
+		case 5:InorderTransversal(root);
 			break;
 		case 6:; int x;
 			printf("Enter data of Node: ");

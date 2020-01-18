@@ -1,3 +1,8 @@
 ﻿  BinarySearchTree.c
-c:\users\administrator\source\repos\day7\day7\binarysearchtree.c(98): warning C4029: declared formal parameter list different from definition
+  BinarySearchTree_main.c
+  Stack.c
+c:\users\administrator\source\repos\day7\day7\stack.c(8): warning C4047: '=': 'BinarySearchTree **' differs in levels of indirection from 'PBST'
+c:\users\administrator\source\repos\day7\day7\stack.c(37): warning C4047: 'return': 'PBST' differs in levels of indirection from 'int'
+c:\users\administrator\source\repos\day7\day7\stack.c(45): warning C4047: 'return': 'PBST' differs in levels of indirection from 'int'
+  Generating Code...
   Day7.vcxproj -> C:\Users\Administrator\source\repos\Day7\Debug\Day7.exe
