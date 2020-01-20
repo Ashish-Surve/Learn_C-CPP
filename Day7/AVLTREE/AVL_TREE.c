@@ -69,7 +69,7 @@ AVL_TREE* InsertNewNodeMemory(AVL_TREE*node, int val)
 	}
 
 	// Right Subtree Left Child Case (RL Rotation)
-	else if (bal_factor < -1 && node->lChild->data > val)
+	else if (bal_factor < -1 && node->rChild->data > val)
 	{
 		node->rChild = rightRotate(node->rChild);
 		return leftRotate(node);
@@ -91,7 +91,7 @@ AVL_TREE* leftRotate(AVL_TREE* node)
 	node->Height = 1 + Max(Height(node->lChild), Height(node->rChild));
 	temp1->Height = 1 + Max(Height(temp1->lChild), Height(temp1->rChild));
 
-	return node;
+	return temp1;
 }
 
 AVL_TREE* rightRotate(AVL_TREE* node)
@@ -107,7 +107,7 @@ AVL_TREE* rightRotate(AVL_TREE* node)
 	node->Height = 1 + Max(Height(node->lChild), Height(node->rChild));
 	temp1->Height = 1 + Max(Height(temp1->lChild), Height(temp1->rChild));
 
-	return node;
+	return temp1;
 
 }
 
@@ -141,7 +141,7 @@ void InorderTransversal(AVL_TREE * root)
 		if (root == NULL)
 			return;
 		
-		PreorderTransversal(root->lChild);
+		InorderTransversal(root->lChild);
 		printf("%d -> ", root->data);
-		PreorderTransversal(root->rChild);
+		InorderTransversal(root->rChild);
 }

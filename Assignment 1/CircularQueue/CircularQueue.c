@@ -11,81 +11,80 @@ Queue* setUpQueue()
 }
 void enQueue(Queue* q, int value)
 {
-	if (!isFull(q))
+	if (isFull(q))
 	{
-		if (q->front == -1 && q->rear == -1)
-		{
-			q->front=q->rear=0;		
-		}
-		else if (q->rear = SIZE - 1 && q->front != 0)
-		{
-			q->rear = 0;
-		}
-		else
-		{
-			q->rear = (q->rear + 1) % q->size;
-			
-		}
-		q->arr[q->rear] = value;
+		printf("Queue is full");
 	}
 	else
-		printf("Queue is Full");
-}
-int deQueue(Queue* q)
-{
-	if (!isEmpty(q))
 	{
-		if (q->front == q->rear)
-		{
-			q->front = q->rear = -1;
-		}
-		else if(q->front==SIZE-1)
+		if (q->front == -1)
 		{
 			q->front = 0;
 		}
-		else
-		{
-			q->front += 1;
-		}
-		
+		q->rear = (q->rear + 1) % SIZE;   // going round and round concept
+		// inserting the element
+		q->arr[q->rear] = value;
+		printf("Enqueued");
+	}
+
+}
+int deQueue(Queue* q)
+{
+	int y;
+
+	if (isEmpty(q))
+	{
+		printf("Queue is empty.");
 	}
 	else
-		printf("Queue is Empty");
+	{
+		y = q->arr[q->front];
+		if (q->front == q->rear)
+		{
+			// only one element in queue, reset queue after removal
+			q->front = -1;
+			q->rear = -1;
+		}
+		else
+		{
+			q->front = (q->front + 1) % SIZE;
+		}
+		return(y);
+	}
 }
 void displayQueue(Queue* q)
 {
 	int i;
 	int front = q->front;
 	int rear = q->rear;
-	if (front == -1)
-		printf("\nCircular Queue is Empty!!!\n");
+	if (isEmpty(q))
+	{
+		printf("Empty Queue");
+	}
 	else
 	{
-		i = front;
-		printf("\nCircular Queue Elements are : \n");
-		if (front <= rear) {
-			while (i <= rear)
-				printf("%d %d %d\n", q->arr[i++], front, rear);
+		
+		for (i = front; i != rear; i = (i + 1) % SIZE)
+		{
+			printf( "%d\t", q->arr[i]);
 		}
-		else {
-			while (i <= SIZE - 1)
-				printf("%d %d %d\n", q->arr[i++], front, rear);
-			i = 0;
-			while (i <= rear)
-				printf("%d %d %d\n", q->arr[i++], front, rear);
-		}
+		printf("%d\t", q->arr[i]);
 	}
 }
 
 BOOL isFull(Queue* q)
 {
-	int r = q->rear;
-	int f = q->front;
-
-	if ((r + 1) % q->size == f)
+	int front = q->front;
+	int rear = q->rear;
+	if (front == 0 && rear == SIZE - 1)
+	{
 		return TRUE;
-	else
-		return FALSE;
+	}
+	if (front == rear + 1)
+	{
+		return TRUE;
+	}
+	return FALSE;
 }
 
 BOOL isEmpty(Queue* q)
