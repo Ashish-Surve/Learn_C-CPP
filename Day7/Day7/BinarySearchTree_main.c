@@ -24,18 +24,15 @@ int main()
 		{
 		case 1:
 			break;
-		case 2:AddNewNode(&root);
+		case 2:AddNewNode(root);
 			break;
-		case 3:PreOrderTraversal(root);
+		case 3:
 			break;
 		case 4:
 			break;
 		case 5:InorderTransversal(root);
 			break;
-		case 6:; int x;
-			printf("Enter data of Node: ");
-			scanf_s("%d", &x);
-			DeleteNode(root,x);
+		case 6:
 			break;
 		case 7: exit(0);
 			break;

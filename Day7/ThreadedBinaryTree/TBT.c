@@ -32,6 +32,7 @@ PTBT InsertNode(PTBT root, int value)
 			if (curr->data == value)
 			{
 				printf("Duplicate Value\n");
+				return root;
 			}
 			
 			parent = curr;
@@ -81,9 +82,43 @@ PTBT InsertNode(PTBT root, int value)
 	}
 	return root;
 }
+PTBT inorderSuccesor(PTBT temp)
+{
+	return;
+}
 
 void PreOrderTraversal(PTBT root);
 void PostOrderTraversal(PTBT root);
-void InOrderTraversal(PTBT root);
+
+void InOrderTraversal(PTBT root)
+{
+	if (NULL == root)
+	{
+		printf("EMPTY TREE\n");
+		return;
+	}
+	while (false == root->lflag)
+	{
+		root = root->left;
+	}
+	while (NULL != root)
+	{
+		printf("%d ->", root->data);
+
+		if (root->rflag == true)
+		{
+			root = root->right;
+			printf("%d ->", root->data);
+		}
+		root = root->right;
+		
+		
+		
+		while (NULL!=root && root->lflag == false)
+			root = root->left;
+	}
+
+
+}
 
 PTBT DeleteNode(PTBT root, int x);
