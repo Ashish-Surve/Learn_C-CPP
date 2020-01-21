@@ -2,6 +2,7 @@
 #include<malloc.h>
 #include<stdio.h>
 #include<stdlib.h>
+#include "..\ThreadedBinaryTree\TBT.h"
 
 
 PBST CreateNode()
@@ -13,6 +14,8 @@ PBST CreateNode()
 	scanf_s("%d", &(x->data));
 	return x;
 }
+
+
 
 void AddNewNode(PPBST root)
 {
@@ -94,46 +97,46 @@ void InOrderTraversal(PBST root)
 	InOrderTraversal(root->right);
 }
 
-PBST DeleteNode(PBST root,int x)
+PBST DeleteNode(PBST curr,int x)
 {
 
-	if (root == NULL)
+	if (curr == NULL)
 	{
-		return root;
+		return curr;
 	}
 
 
-	if (root->data > x)
+	if (curr->data > x)
 	{
-		root->left = DeleteNode(root->left,x);
+		curr->left = DeleteNode(curr->left,x);
 	}
-	else if (root->data < x)
+	else if (curr->data < x)
 	{
-		root->right = DeleteNode(root->right,x);
+		curr->right = DeleteNode(curr->right,x);
 	}
 	else
 	{
-		if (root->left == NULL)
+		if (curr->left == NULL)
 		{
-			PBST t = root->right;
-			free(root);
+			PBST t = curr->right;
+			free(curr);
 			return t;
 		}
-		else if (root->right == NULL)
+		else if (curr->right == NULL)
 		{
-			PBST t = root->left;
-			free(root);
+			PBST t = curr->left;
+			free(curr);
 			return t;
 		}
 	
-			PBST temp = root->right;
+			PBST temp = curr->right;
 
 			while(temp && temp->left != NULL)
 			{
 				temp = temp->left;
 			}
-			root->data = temp->data;
-			root->right = DeleteNode(root->right, temp->data);
+			curr->data = temp->data;
+			curr->right = DeleteNode(curr->right, temp->data);
 	}
-	return root;
+	return curr;
 }

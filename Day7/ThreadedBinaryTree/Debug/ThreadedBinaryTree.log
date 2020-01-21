@@ -1,0 +1,4 @@
+﻿  TBT.c
+  TBT_main.c
+  Generating Code...
+LINK : fatal error LNK1561: entry point must be defined

@@ -7,11 +7,11 @@
 
 #define M 30
 // A structure to represent a stack 
-struct Stack {
+typedef  struct Stack {
 	int top;
 	unsigned int capacity;
 	char array[M][M];
-};
+}Stack;
 
 
 struct Stack* createStack(unsigned capacity);

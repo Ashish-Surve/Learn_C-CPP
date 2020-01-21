@@ -15,8 +15,6 @@ AVL_TREE* AllocateNewNodeMemory(int val);
 
 AVL_TREE* InsertNewNodeMemory(AVL_TREE*root, int val);
 
-AVL_TREE * DeleteNodeMemory(AVL_TREE*root, int val);
-
 void PreorderTransversal(AVL_TREE* root);
 
 void InorderTransversal(AVL_TREE* root);
@@ -26,3 +24,5 @@ int getBalance(AVL_TREE* node);
 AVL_TREE* leftRotate(AVL_TREE* node);
 
 AVL_TREE* rightRotate(AVL_TREE* node);
+
+AVL_TREE* deleteNode(AVL_TREE* node,int x);

@@ -3,5 +3,7 @@
 
 char* InfixToPostfix(char a[30])
 {
-	Stack
+	 Stack s;
+
+
 }

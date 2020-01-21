@@ -111,6 +111,86 @@ AVL_TREE* rightRotate(AVL_TREE* node)
 
 }
 
+AVL_TREE * deleteNode(AVL_TREE * curr,int x)
+{
+	if (curr == NULL)
+	{
+		return curr;
+	}
+
+	if (curr->data > x)
+	{
+		curr->lChild = deleteNode(curr->lChild, x);
+	}
+	else if (curr->data < x)
+	{
+		curr->rChild = deleteNode(curr->rChild, x);
+	}
+	else
+	{
+		if (curr->lChild == NULL)
+		{
+			AVL_TREE* t = curr->rChild;
+			free(curr);
+			return t;
+		}
+		else if (curr->rChild == NULL)
+		{
+			AVL_TREE* t = curr->lChild;
+			free(curr);
+			return t;
+		}
+		//find inorder successor
+		AVL_TREE* temp = curr->rChild;
+
+		while (temp && temp->lChild != NULL)
+		{
+			temp = temp->lChild;
+		}
+		curr->data = temp->data;
+		curr->rChild = deleteNode(curr->rChild, temp->data);
+	}
+		//if the tree has only one node return
+		if (curr == NULL)
+			return curr;
+
+		curr->Height = Max(Height(curr->lChild), Height(curr->rChild))+1;
+
+		//Get the balance factor of the node.
+		int bal_factor = getBalance(curr);
+
+		// Left Subtree Left Child Case (LL Rotation)
+		if (bal_factor > 1 && getBalance(curr->lChild) >= 0);
+		{
+			return rightRotate(curr);
+		}
+
+		// Right Subtree Right Child Case (RR Rotation)
+		if (bal_factor < -1 && getBalance(curr->rChild) <= 0)
+		{
+			return leftRotate(curr);
+		}
+
+		// Left Subtree Right Child Case (LR Rotation)
+		if (bal_factor > 1 && getBalance(curr->lChild) < 0)
+		{
+			curr->lChild = leftRotate(curr->lChild);
+			return rightRotate(curr);
+		}
+
+		// Right Subtree Left Child Case (RL Rotation)
+		else if (bal_factor < -1 && getBalance(curr->lChild) > 0)
+		{
+			curr->rChild = rightRotate(curr->rChild);
+			return leftRotate(curr);
+		}
+
+
+		return curr;
+	
+
+}
+
 int getBalance(AVL_TREE* node)
 {
 	if (node == NULL)
@@ -121,10 +201,7 @@ int getBalance(AVL_TREE* node)
 	return (Height(node->lChild) - Height(node->rChild));
 }
 
-AVL_TREE * DeleteNodeMemory(AVL_TREE*root, int val)
-{
 
-}
 
 void PreorderTransversal(AVL_TREE* root)
 {

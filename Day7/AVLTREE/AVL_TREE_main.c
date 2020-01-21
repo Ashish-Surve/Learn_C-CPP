@@ -38,6 +38,9 @@ int main()
 		case 5: InorderTransversal(root);
 			break;
 		case 6:
+			printf("Enter delete node data?\t");
+			scanf_s("%d", &x);
+			deleteNode(root,x);
 			break;
 		case 7: exit(0);
 			break;
