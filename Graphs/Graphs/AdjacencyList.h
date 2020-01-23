@@ -24,4 +24,4 @@ typedef struct GRAPH
 GRAPH* CreateNewEdgeInGraph(int vertex);
 void AddNewEdgeInGraph(GRAPH* ,int src,int dst);
 void DisplayGraphRepresentation(GRAPH * graph);
-void BreadthFirstSearch(Graph* g);
+void BreadthFirstSearch(GRAPH* g);

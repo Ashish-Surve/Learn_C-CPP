@@ -53,3 +53,8 @@ void DisplayGraphRepresentation(GRAPH * g)
 		printf("\n");
 	}
 }
+
+void BreadthFirstSearch(GRAPH* g)
+{
+
+}

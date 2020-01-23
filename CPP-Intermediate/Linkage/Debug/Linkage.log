@@ -1,0 +1,5 @@
+﻿  External_Linkage.cpp
+c:\users\administrator\source\repos\cpp-intermediate\linkage\external_linkage.cpp(3): error C2086: 'int g_val': redefinition
+  c:\users\administrator\source\repos\cpp-intermediate\linkage\global.h(2): note: see declaration of 'g_val'
+  External_Linkage_main.cpp
+  Generating Code...

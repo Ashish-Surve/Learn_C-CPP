@@ -8,21 +8,14 @@ int main()
 	setUpTeam(teams);
 	//displayTeamInfo(teams);
 	srand(time(0));
+
 	//shuffle the array to decide pre-quarter matches.
 	int match_decide[T_SIZE] = { 0,1,2,3,4,5,6,7 };
 	shuffle(match_decide,T_SIZE);
-	//int i;
-	//for (i = 0; i < T_SIZE; i++)
-	//	printf("%d\t", match_decide[i]);
 
 	//alternate teams have a match eg, team[0] vs team[1];
 	int i,j;
 
-	/*displayTeamInfo(teams[0]);
-	displayTeamInfo(teams[1]);*/
-	
-
-	// loop for semi finals
 
 		//match between alternate teams. 
 		//  loop for quarter finals
@@ -50,8 +43,10 @@ int main()
 		}
 
 		printf("\nQuarter Finals over\n");
+
 		//setting scores back to 0 for teams
 		refreshScore(teams);
+
 		// loop for semi finals
 		for (i = 0;i < T_SIZE; i += 4)
 		{
@@ -77,8 +72,10 @@ int main()
 		}
 
 		printf("\nSemi Finals over\n");
+
 		//setting scores back to 0 for teams
 		refreshScore(teams);
+
 		// for finals
 			i = 0;
 			Team A = teams[match_decide[i]];
