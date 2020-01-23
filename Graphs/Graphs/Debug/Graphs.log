@@ -1,0 +1,3 @@
+﻿  AdjacencyList.c
+c:\users\administrator\source\repos\graphs\graphs\adjacencylist.c(5): warning C4013: 'malloc' undefined; assuming extern returning int
+  Graphs.vcxproj -> C:\Users\Administrator\source\repos\Graphs\Debug\AdjacencyList.exe

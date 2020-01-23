@@ -1,8 +1,5 @@
 ﻿  TBT.c
 c:\users\administrator\source\repos\day7\threadedbinarytree\tbt.c(5): warning C4013: 'malloc' undefined; assuming extern returning int
 c:\users\administrator\source\repos\day7\threadedbinarytree\tbt.c(87): warning C4033: 'inorderSuccesor' must return a value
-  TBT_main.c
-c:\users\administrator\source\repos\day7\threadedbinarytree\tbt_main.c(39): warning C4013: 'exit' undefined; assuming extern returning int
-  Generating Code...
 c:\users\administrator\source\repos\day7\threadedbinarytree\tbt.c(88): warning C4716: 'inorderSuccesor': must return a value
   ThreadedBinaryTree.vcxproj -> C:\Users\Administrator\source\repos\Day7\Debug\ThreadedBinaryTree.exe

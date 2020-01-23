@@ -108,6 +108,8 @@ void InOrderTraversal(PTBT root)
 		if (root->rflag == true)
 		{
 			root = root->right;
+				if (NULL == root)
+					return;
 			printf("%d ->", root->data);
 		}
 		root = root->right;
