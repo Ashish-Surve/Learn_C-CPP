@@ -1,2 +1,4 @@
 ﻿  main.cpp
+c:\users\administrator\source\repos\cpp-intermediate\typesandqualifiers\main.cpp(19): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\administrator\source\repos\cpp-intermediate\typesandqualifiers\main.cpp(20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   TypesAndQualifiers.vcxproj -> C:\Users\Administrator\source\repos\CPP-Intermediate\Debug\TypesAndQualifiers.exe

@@ -5,7 +5,7 @@ int main()
 	//DataTypes
 	int iNum = 100;
 	//generic DT
-	auto val = iNum;
+	int val = iNum;
 	cout << "Val = "<<val << endl;
 
 	cout << "-------------------------------------------"<< endl;
@@ -16,4 +16,9 @@ int main()
 	cout << "SIZE: " << sizeof(val);
 	string name = "Ashish";
 	//val = name;
+	float f = 3.14159265358979;
+	val = f;
+	cout << "\nVal = " << val << endl;
+	cout << "-------------------------------------------" << endl;
+
 }
