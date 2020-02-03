@@ -22,6 +22,5 @@ int main()
 	Data::Command();
 	Collection::Command();
 
-
 	return 0;
 }

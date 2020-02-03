@@ -1,0 +1,5 @@
+﻿  Inline.cpp
+  main.cpp
+c:\users\administrator\source\repos\namespaces\inline_functions\inline.h(8): error C2065: 'cout': undeclared identifier
+c:\users\administrator\source\repos\namespaces\inline_functions\inline.h(8): error C2065: 'endl': undeclared identifier
+  Generating Code...

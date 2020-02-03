@@ -22,7 +22,7 @@ public:
 
 	void SearchElement(int val);
 
-	int HashFunction(int val);
+	inline int HashFunction(int val);
 
 	void Display();
 };

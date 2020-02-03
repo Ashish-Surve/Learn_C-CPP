@@ -138,7 +138,7 @@ void HashTable::SearchElement(int val)
 	return;
 }
 
-int HashTable::HashFunction(int val)
+inline int HashTable::HashFunction(int val)
 {
 	int index = (val) % SIZE;
 	return index;
@@ -148,6 +148,6 @@ void HashTable::Display()
 {
 	for (int i = 0; i < SIZE; i++)
 	{
-		cout << HashTab[i].data << "\t" << HashTab[i].next << endl;
+		cout <<i<<": "<< HashTab[i].data << "\t" << HashTab[i].next << endl;
 	}
 }

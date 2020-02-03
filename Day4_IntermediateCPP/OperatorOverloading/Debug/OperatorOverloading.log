@@ -1,0 +1,5 @@
+﻿  FriendFunctionOverloading.cpp
+  Source.cpp
+  Generating Code...
+c:\users\administrator\source\repos\day4_intermediatecpp\operatoroverloading\friendfunctionoverloading.cpp(22): warning C4172: returning address of local variable or temporary
+  OperatorOverloading.vcxproj -> C:\Users\Administrator\source\repos\Day4_IntermediateCPP\Debug\OperatorOverloading.exe

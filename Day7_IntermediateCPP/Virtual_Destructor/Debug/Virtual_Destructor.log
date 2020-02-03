@@ -1,0 +1,3 @@
+﻿  Source.cpp
+c:\users\administrator\source\repos\day7_intermediatecpp\virtual_destructor\source.cpp(9): error C2039: 'some': is not a member of 'Base'
+  c:\users\administrator\source\repos\day7_intermediatecpp\virtual_destructor\virtualdestructor.h(4): note: see declaration of 'Base'
