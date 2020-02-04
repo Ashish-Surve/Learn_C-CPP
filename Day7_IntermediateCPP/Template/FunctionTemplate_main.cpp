@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 #include"FunctionTemplate.h"
-template <class X>
+
 
 int main()
 {
@@ -10,7 +10,7 @@ int main()
 	char a = 'x', b = 'z';
 
 	cout << "Original is  " << i << " ::: " << j << endl;
-	swapargs<int&,int&>(i, j);
+	swapargs(i, j);
 	cout << "Swapped is  " << i << " ::: " << j << endl << endl;
 
 	cout << "Original is  " << x << " ::: " << y << endl;
