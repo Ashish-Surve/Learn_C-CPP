@@ -1,2 +1,5 @@
-﻿  Array.cpp
+﻿  Vector.cpp
+c:\users\administrator\source\repos\day1_stl\containers\vector.cpp(24): warning C4101: 'z': unreferenced local variable
+c:\users\administrator\source\repos\day1_stl\containers\vector.cpp(24): warning C4101: 'y': unreferenced local variable
+c:\users\administrator\source\repos\day1_stl\containers\vector.cpp(24): warning C4101: 'x': unreferenced local variable
   Containers.vcxproj -> C:\Users\Administrator\source\repos\Day1_STL\Debug\Containers.exe
