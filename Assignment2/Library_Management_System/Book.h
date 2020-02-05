@@ -1,0 +1,22 @@
+#pragma once
+#include<iostream>
+#include<string>
+using namespace std;
+class Book
+{
+private:
+	int book_id;
+	string book_name;
+	string book_author;
+
+public:
+
+	Book() = default;
+	Book(int bid, string name, string author) :book_id(bid), book_name(name), book_author(author){}
+	string getBookName();	// getter methods
+	string getBookAuthor();
+	void setBookName(string book_name);	// setter methods
+	void setBookAuthor(string book_author);
+
+	void displayBookDetails();
+};

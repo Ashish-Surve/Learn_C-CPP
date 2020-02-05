@@ -16,5 +16,12 @@ public:
 
 	Record() = default;
 	Record(string no, string n, Handling_Stage h) :pno(no), name(n), hs(h) {};
+	
+	inline void Display()
+	{
+		cout << name << endl;
+		cout << pno << endl;
+		cout << hs << endl;
+	}
 };
 

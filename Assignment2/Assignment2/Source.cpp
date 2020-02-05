@@ -1,36 +1,31 @@
 #include<iostream>
-
+#include"PhoneDirectory.h"
 using namespace std;
 
 int main()
 {
 	int choice;
-	HashTable hash;
+	PhoneDirectory pd;
+	
 	while (1)
 	{
 		cout << "\n=====MENU=====\n";
-		cout << "1.Add Element.\n2.Delete Element.\n3.Search Element.\n4.Display\n7.EXIT\n ";
+		cout << "1.Add Element.\n2.Search Element.\n3. Element.\n4.Display\n7.EXIT\n ";
 		fflush(stdin);
 		cin >> choice;
 		int x;
 		switch (choice)
 		{
 		case 1:
-			cout << "Enter Element to Add" << endl;
-			cin >> x;
-			hash.AddElement(x);
+			pd.Add_Customer_Details();
 			break;
 		case 2:
-			cout << "Enter Element to Delete" << endl;
-			cin >> x;
-			hash.DeleteElement(x);
+			pd.Search_Customer_Details();
 			break;
 		case 3:
-			cout << "Enter Element to Search" << endl;
-			cin >> x;
-			hash.SearchElement(x);
+				
 			break;
-		case 4:hash.Display();
+		case 4:
 			break;
 		case 5:
 			break;
