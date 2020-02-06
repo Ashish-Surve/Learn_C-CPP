@@ -8,7 +8,6 @@ private:
 	int studentID;
 	string studentName;
 public:
-	Student() = default;
 	Student() :studentID(0), studentName("") {}
 
 	void acceptStudentData();

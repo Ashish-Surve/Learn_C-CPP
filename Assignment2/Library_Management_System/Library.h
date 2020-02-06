@@ -9,11 +9,12 @@ private:
 
 public:
 	Library();
-	list<Book> getBookList();
+	void UpdateBookList();
 	void AddBook();
 	void RemoveBook();
 	void ModifyBook();
 	void IssueBookToStudent();
 	void MaintainStudentLibraryCard();
-
+	void Write_to_file(Book&);
+	void Show_Records_Book();
 };

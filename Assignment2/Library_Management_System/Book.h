@@ -15,8 +15,9 @@ public:
 	Book(int bid, string name, string author) :book_id(bid), book_name(name), book_author(author){}
 	string getBookName();	// getter methods
 	string getBookAuthor();
+	int getBookId();
 	void setBookName(string book_name);	// setter methods
 	void setBookAuthor(string book_author);
 
-	void displayBookDetails();
+	void displayBookDetails()const;
 };
