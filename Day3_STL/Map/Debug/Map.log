@@ -1,0 +1,25 @@
+﻿  Map.cpp
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\algorithm(92): error C2664: 'void main::<lambda_8a02675c78ac73662b7ce92ccce69dd4>::operator ()(std::map<int,std::map<int,int,std::less<int>,std::allocator<std::pair<const _Kty,_Ty>>>,std::less<_Ty>,std::allocator<std::pair<const _Kty,std::map<_Kty,_Ty,std::less<_Ty>,std::allocator<std::pair<const _Kty,_Ty>>>>>>) const': cannot convert argument 1 from 'std::pair<const _Kty,_Ty>' to 'std::map<int,std::map<int,int,std::less<int>,std::allocator<std::pair<const _Kty,_Ty>>>,std::less<_Ty>,std::allocator<std::pair<const _Kty,std::map<_Kty,_Ty,std::less<_Ty>,std::allocator<std::pair<const _Kty,_Ty>>>>>>'
+          with
+          [
+              _Kty=int,
+              _Ty=int
+          ]
+          and
+          [
+              _Kty=int,
+              _Ty=std::map<int,int,std::less<int>,std::allocator<std::pair<const int,int>>>
+          ]
+          and
+          [
+              _Kty=int,
+              _Ty=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\algorithm(92): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+  c:\users\administrator\source\repos\day3_stl\map\map.cpp(33): note: see reference to function template instantiation '_Fn std::for_each<std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<_Ty>>>,main::<lambda_8a02675c78ac73662b7ce92ccce69dd4>>(_InIt,_InIt,_Fn)' being compiled
+          with
+          [
+              _Fn=main::<lambda_8a02675c78ac73662b7ce92ccce69dd4>,
+              _Ty=std::pair<const int,std::map<int,int,std::less<int>,std::allocator<std::pair<const int,int>>>>,
+              _InIt=std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const int,std::map<int,int,std::less<int>,std::allocator<std::pair<const int,int>>>>>>>
+          ]
