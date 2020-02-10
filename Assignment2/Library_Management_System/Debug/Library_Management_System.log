@@ -1,5 +1,6 @@
 ﻿  Library.cpp
-c:\users\administrator\source\repos\assignment2\library_management_system\library.cpp(50): warning C4101: 'pos': unreferenced local variable
-c:\users\administrator\source\repos\assignment2\library_management_system\library.cpp(113): warning C4244: '=': conversion from 'std::streamoff' to 'int', possible loss of data
-c:\users\administrator\source\repos\assignment2\library_management_system\library.cpp(132): warning C4244: '=': conversion from 'std::streamoff' to 'int', possible loss of data
+c:\users\administrator\source\repos\assignment2\library_management_system\library.cpp(151): warning C4244: '=': conversion from 'std::streamoff' to 'int', possible loss of data
+c:\users\administrator\source\repos\assignment2\library_management_system\library.cpp(170): warning C4244: '=': conversion from 'std::streamoff' to 'int', possible loss of data
+  Source.cpp
+  Generating Code...
   Library_Management_System.vcxproj -> C:\Users\Administrator\source\repos\Assignment2\Debug\Library_Management_System.exe

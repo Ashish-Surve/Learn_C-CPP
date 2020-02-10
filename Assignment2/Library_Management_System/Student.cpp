@@ -14,6 +14,7 @@ void Student::ReadBookList()
 
 void Student::RequestBook()
 {
+	
 }
 
 int Student::getStudentID()
@@ -33,4 +34,10 @@ string Student::getStudentName()
 int Student::setStudentName(string studentName)
 {
 	return 0;
+}
+
+ostream & operator<<(ostream &o, const Student &s)
+{
+	o << s.studentID << "\t\t\t\t" << s.studentName << endl;
+	return o;
 }

@@ -1,14 +1,16 @@
 #pragma once
 #include<string>
+#include"Book.h"
 using namespace std;
 
 class Student
 {
 private:
 	int studentID;
-	string studentName;
+	string studentName; 
 public:
 	Student() :studentID(0), studentName("") {}
+	Student(int x,string y) :studentID(x), studentName(y) {}
 
 	void acceptStudentData();
 	void displayStudentData();
@@ -21,4 +23,6 @@ public:
 
 	string getStudentName();
 	int setStudentName(string studentName);
+
+	friend ostream& operator<<(ostream&, const Student&);
 };

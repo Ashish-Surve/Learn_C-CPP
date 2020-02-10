@@ -11,7 +11,7 @@ private:
 
 public:
 
-	Book() = default;
+	Book() :book_id(0), book_name(""), book_author("") {}
 	Book(int bid, string name, string author) :book_id(bid), book_name(name), book_author(author){}
 	string getBookName();	// getter methods
 	string getBookAuthor();
