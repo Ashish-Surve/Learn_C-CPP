@@ -1,6 +1,2 @@
-﻿  Library.cpp
-c:\users\administrator\source\repos\assignment2\library_management_system\library.cpp(151): warning C4244: '=': conversion from 'std::streamoff' to 'int', possible loss of data
-c:\users\administrator\source\repos\assignment2\library_management_system\library.cpp(170): warning C4244: '=': conversion from 'std::streamoff' to 'int', possible loss of data
-  Source.cpp
-  Generating Code...
+﻿  Source.cpp
   Library_Management_System.vcxproj -> C:\Users\Administrator\source\repos\Assignment2\Debug\Library_Management_System.exe
