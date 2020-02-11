@@ -46,6 +46,7 @@ int main()
 				case 6: lib.Show_Records_Student();
 					break;
 				default:goto A;
+					break;
 				}
 			}
 
@@ -54,7 +55,7 @@ int main()
 		{
 			//Student
 
-			cout << "1. Issue Book\n2. Show Books \n3. Show Issued Books Records\n4.Return Book\n5. Add Student Record\n6.Show Student Records\n" << endl;
+			cout << "1. Issue Book\n2. Show Books \n3. Show Issued Books Records\n4.Return Book\n" << endl;
 
 			cout << "Enter your choice :\n";
 			cin >> choice;
@@ -70,8 +71,7 @@ int main()
 			case 4:lib.ReturnBook();
 				break;
 			default:goto A;
-
-
+				break;
 			}
 
 		}

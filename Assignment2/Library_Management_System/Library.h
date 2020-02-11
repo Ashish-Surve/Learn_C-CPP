@@ -28,6 +28,7 @@ public:
 	void Write_to_file(int,int);
 	void Show_Records_Book();
 	void Show_Issued_Book();
+	int ifBookPresent(int);
 
 	void AddStudent();
 	void Show_Records_Student();

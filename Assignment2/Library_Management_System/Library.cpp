@@ -191,13 +191,21 @@ void Library::IssueBookToStudent()
 		cin.ignore(INT_MAX, '\n');					//SUPER IMPORTANT
 		return;
 	}
-
+	auto book_flag = ifBookPresent(bid);
 	auto search = IssueEntry.find(bid);
-	if (search != IssueEntry.end()) {
+
+	if (!book_flag)		//check if book present in Library
+	{
+		cout << "Book Doesn't Exist " << endl;
+		return;
+	}
+	if (search != IssueEntry.end()) 
+	{
 		cout << "Book Already Issued\n" << endl;
 		return;
 	}
-	else {
+	else 
+	{
 		ofstream out("IssueRecord.dat",ios::app);
 		if (!out) 
 		{
@@ -334,6 +342,19 @@ void Library::Show_Issued_Book()
 		cout << i->first << "\t\t" << i->second << endl;
 	}
 	cout << "===================================================\n";
+}
+
+int Library::ifBookPresent(int find)
+{
+	for (auto x : bookList)
+	{
+		if (x.getBookId() == find)
+		{
+			return 1;
+		}
+
+	}
+	return 0;
 }
 
 
