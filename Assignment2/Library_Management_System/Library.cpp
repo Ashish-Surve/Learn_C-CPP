@@ -3,10 +3,8 @@
 #include<string>
 #include<fstream>
 using namespace std;
-Library::Library()
-{
+Library::Library(){}
 
-}
 void Library::UpdateBookList()
 {
 	//Input stream class
@@ -152,7 +150,7 @@ void Library::ModifyBook()//incomplete
 	{
 		while (!io.eof() && io.read((char*)r, sizeof(Book)))
 		{
-			if (r->getBookId() == id)		//if id same dont write.
+			if (r->getBookId() == id)		//if id same.
 			{
 				if (option == 1)
 				{
@@ -170,7 +168,6 @@ void Library::ModifyBook()//incomplete
 			pos = io.tellg();
 		}
 		io.close();
-
 
 		UpdateBookList();//since the file has been changed.
 	}
